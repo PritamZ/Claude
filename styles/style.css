@@ -1,0 +1,62 @@
+/* CSS Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: rgba(255, 255, 255, 0.8);
+    --text-color: #333;
+    --glass-background: rgba(255, 255, 255, 0.3);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgba(52, 152, 219, 1), rgba(41, 128, 185, 1));
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: var(--glass-background);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Additional styles */
+a {
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--secondary-color);
+}
